@@ -1,0 +1,26 @@
+name: 习讯云自动签到
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 1 * * 1-6
+
+permissions:
+  contents: read
+
+jobs:
+ build:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.8'  # 根据需要选择Python版本
+    - name: Install dependencies
+      run: |
+        pip install requests
+    - name: Run xixunyun.py
+      run: |
+        # 或者如果你的脚本不需要命令行参数，可以直接运行：
+        python xixunyun.py
