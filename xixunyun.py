@@ -46,5 +46,4 @@ sign_data={'address':'浙江省嘉兴市南湖区建设街道中山东路699号'
     }
 sign_request=requests.post(url=sign_url,data=sign_data,headers=login_header)
 sign=json.loads(sign_request.text)
-print(sign)
 sent_email()
