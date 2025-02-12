@@ -20,7 +20,7 @@ def sent_email():
         # 登录并发送邮件
         with smtplib.SMTP_SSL(smtp_server, smtp_port) as server:
             server.login('1691733533@qq.com', 'fsflozzupmlbfdaj')
-            server.sendmail('1691733533@qq.com', ['1691733533@qq.com'], msg.as_string())
+            server.sendmail('1691733533@qq.com', ['992863418@qq.com'], msg.as_string())
     except smtplib.SMTPResponseException as e:
         pass
     except Exception as ex:
